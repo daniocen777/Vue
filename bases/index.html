@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- Importando vue -->
+    <script src="https://unpkg.com/vue@3"></script>
+  </head>
+  <body>
+    <!-- <div id="myApp"></div> -->
+    <!-- Bloque 1 -->
+    <h1>Bloque 1</h1>
+    <div id="block1">
+      <h3>{{ author }}</h3>
+      <blockquote>- {{ quote }}</blockquote>
+      <button v-on:click="changeAuthor">Change quote</button>
+    </div>
+
+    <!-- Bloque 2 -->
+    <h1>Bloque 2</h1>
+    <div id="block2">
+      <h3>Batman's quotes <small> {{ newQuote }} </small> </h3>
+      <!-- Disparar evento con un enter -->
+      <input type="text" v-model="newQuote" v-on:keypress.enter="addQuote"/>
+    </hr>
+      <ul>
+        <li v-for="(item, index) in quotes">
+          <span> {{ index +  1}}. {{ item.quote }} </span>
+          <blockquote v-if="item.author">- {{ item.author }}</blockquote>
+        </li>
+      </ul>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
