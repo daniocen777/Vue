@@ -20,6 +20,10 @@ export default {
       type: Number,
       //required: true,
       default: 10,
+      /* Validaciones */
+      validator(value) {
+        return value >= 20;
+      },
     },
   },
   /* Estados */
