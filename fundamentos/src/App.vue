@@ -1,23 +1,24 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <h3>Enviando una propiedad</h3>
+  <!-- <img alt="Vue logo" src="./assets/logo.png" />
+  <h3>Enviando una propiedad</h3> -->
   <!-- Atajo: v-bind: por : -->
-  <Counter v-bind:start="15" />
-  <h3>Por defecto</h3>
-  <Counter />
+
+  <!-- <Counter v-bind:start="15" /> -->
+  <!-- <h3>Por defecto</h3> -->
+  <Indecision />
 </template>
 
 <script>
-import Counter from "./components/Counter.vue";
+import Indecision from "./components/Indecision.vue";
 
 export default {
   name: "App",
   components: {
-    Counter,
+    Indecision,
   },
 };
 </script>
-
+  
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
