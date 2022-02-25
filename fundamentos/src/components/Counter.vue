@@ -2,6 +2,7 @@
   <!-- No tener mucos cálculos -->
   <h2>{{ customTitle }}</h2>
   <p>{{ counter }} <sup>2</sup> = {{ squareCounter }}</p>
+  <p data-testid="counter">{{ counter }}</p>
   <div>
     <!-- Atajo => v-on por @ -->
     <button v-on:click="increase">+1</button>
@@ -19,10 +20,10 @@ export default {
     start: {
       type: Number,
       //required: true,
-      default: 10,
+      default: 15,
       /* Validaciones */
       validator(value) {
-        return value >= 20;
+        return value >= 5;
       },
     },
   },
