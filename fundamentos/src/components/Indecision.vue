@@ -31,10 +31,10 @@ export default {
         );
         this.answer = answer === "yes" ? "¡Sí!" : "¡No!";
         this.img = image;
-
-        console.log("result", result);
       } catch (error) {
         console.log("ERROR", error);
+        this.answer = "No se pudo cargar el API";
+        this.img = null;
       }
     },
   },
@@ -43,6 +43,7 @@ export default {
     question(value, oldValue) {
       // console.log({ value, oldValue });
       this.isValidQuestion = false;
+      console.log({ value });
       // Reconocer cuando el cliente coloca ? para hacer una petición Http (https://yesno.wtf/)
       if (!value.includes("?")) return;
       this.isValidQuestion = true;
